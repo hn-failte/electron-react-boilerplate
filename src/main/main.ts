@@ -2,6 +2,7 @@ import path from 'path';
 import { crashReporter, app, BrowserWindow, shell, ipcMain } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
+import '@/main/logger';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 

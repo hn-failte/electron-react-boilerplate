@@ -24,6 +24,10 @@ window.electron.ipcRenderer
   .invoke('ipc-ready-promise', '1 > renderer is ready from promise!')
   .then((arg) => {
     console.log('4 > renderer:', arg);
+    return arg;
+  })
+  .catch((err) => {
+    console.error(err);
   });
 
 window.electron.ipcRenderer.once('renderer-ready-single', (arg) => {
